@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable
+            name="recyclerlist"
+            type="String" />
+        <variable
+            name="crudActivity"
+            type="com.shruti.practice.CrudActivity" />
+        <import type="android.view.View"/>
+    </data>
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".CrudActivity">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#31CAE1"
+        android:textSize="@dimen/hello_30sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:text="@{recyclerlist}" />
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:id="@+id/recycler"
+       />
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:src="@drawable/baseline_view_headline_24"
+        android:backgroundTint="#31CAE1"
+        android:onClick="@{()-> crudActivity.fabButton()}"/>
+<!--        android:id="@+id/fab"/>-->
+</LinearLayout>
+</layout>
