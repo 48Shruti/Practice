@@ -53,6 +53,10 @@ class MainActivity : AppCompatActivity() {
             var intent = Intent(this, CrudActivity::class.java)
             startActivity(intent)
         }
+        binding.btnpopup.setOnClickListener {
+            var intent = Intent(this,PopUpmenu::class.java)
+            startActivity(intent)
+        }
 
     }
 
