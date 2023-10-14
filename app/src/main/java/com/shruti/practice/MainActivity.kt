@@ -9,8 +9,7 @@ import androidx.appcompat.app.AlertDialog
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.shruti.practice.databinding.ActivityMainBinding
 import com.shruti.practice.databinding.CustomDialogBinding
-import com.shruti.practice.rooncrud.Notesdataclass
-import com.shruti.practice.rooncrud.RecyclerAdapter
+import com.shruti.practice.RecyclerAdapter
 
 class MainActivity : AppCompatActivity() {
     lateinit var binding: ActivityMainBinding
@@ -55,6 +54,10 @@ class MainActivity : AppCompatActivity() {
         }
         binding.btnpopup.setOnClickListener {
             var intent = Intent(this,PopUpmenu::class.java)
+            startActivity(intent)
+        }
+        binding.btnoptionmenu.setOnClickListener {
+            var intent = Intent(this,OptionMenubar::class.java)
             startActivity(intent)
         }
 

@@ -21,24 +21,27 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:id="@+id/tvtitle"
         android:text="@{Title}"/>
     <EditText
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content"
+        android:id="@+id/ettitle"/>
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@{Description}" />
     <EditText
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content"
+        android:id="@+id/etdescription"/>
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@{Save}"
         android:backgroundTint="#31CAE1"
+        android:id="@+id/btnsave"
         android:layout_gravity="center"
-        android:onClick="@{()-> crudActivity.savenotes()}"
         />
 </LinearLayout>
 </layout>

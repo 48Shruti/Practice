@@ -38,4 +38,10 @@
         android:layout_gravity="center"
         android:text="Pop Up Menu"
         android:id="@+id/btnpopup"/>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="Option Menu bar"
+        android:id="@+id/btnoptionmenu"/>
 </LinearLayout>

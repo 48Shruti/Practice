@@ -36,7 +36,7 @@
         android:layout_gravity="right"
         android:src="@drawable/baseline_view_headline_24"
         android:backgroundTint="#31CAE1"
-        android:onClick="@{()-> crudActivity.fabButton()}"/>
+        android:id="@+id/fab" />
 <!--        android:id="@+id/fab"/>-->
 </LinearLayout>
 </layout>
