@@ -42,6 +42,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:text="Option Menu bar"
+        android:text="Option Menu bar and jetpack navigation"
         android:id="@+id/btnoptionmenu"/>
 </LinearLayout>

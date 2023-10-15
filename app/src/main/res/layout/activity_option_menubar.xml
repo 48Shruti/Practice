@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".OptionMenubar">
     <androidx.appcompat.widget.Toolbar
         android:layout_width="match_parent"
@@ -15,4 +16,17 @@
             android:layout_height="wrap_content"
             android:text="Option menu bar"/>
     </androidx.appcompat.widget.Toolbar>
+    <fragment
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:id="@+id/navHost"
+        app:defaultNavHost = "true"
+        app:navGraph = "@navigation/bottomnavigation"
+        android:name="androidx.navigation.fragment.NavHostFragment" />
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/bottomnav"
+        app:menu="@menu/popupmenu"/>
 </LinearLayout>
