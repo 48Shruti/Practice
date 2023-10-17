@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import com.shruti.practice.databinding.FragmentSecondBinding
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -17,6 +18,9 @@ private const val ARG_PARAM2 = "param2"
  * create an instance of this fragment.
  */
 class SecondFragment : Fragment() {
+    lateinit var binding : FragmentSecondBinding
+    var name = ""
+    var rollno = 0
     // TODO: Rename and change types of parameters
     private var param1: String? = null
     private var param2: String? = null
@@ -33,8 +37,19 @@ class SecondFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
+        binding = FragmentSecondBinding.inflate(layoutInflater)
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_second, container, false)
+        return binding.root
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        arguments?.let {
+            name = it.getString("name")?:""
+            rollno = it.getInt("rollno")?:0
+        }
+        binding.tvname.setText(name)
+        binding.tvrollno.setText(rollno.toString())
     }
 
     companion object {
