@@ -60,6 +60,10 @@ class MainActivity : AppCompatActivity() {
             var intent = Intent(this,OptionMenubar::class.java)
             startActivity(intent)
         }
+        binding.btnwebview.setOnClickListener {
+            var intent = Intent(this,Webview::class.java)
+            startActivity(intent)
+        }
 
     }
 
