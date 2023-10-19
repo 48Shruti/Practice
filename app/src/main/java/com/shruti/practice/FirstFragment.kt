@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.NavController
 import androidx.navigation.fragment.findNavController
+import com.google.android.material.snackbar.Snackbar
 import com.shruti.practice.databinding.FragmentFirstBinding
 
 // TODO: Rename parameter arguments, choose names that match
@@ -52,11 +53,24 @@ class FirstFragment : Fragment() {
             else if (binding.etrollno.text.isNullOrEmpty()){
                 binding.etrollno.error ="Enter your roll number"
             }
-            else{
+            else {
                 var bundle = Bundle()
-                bundle.putString("name",binding.etname.text.toString())
-                bundle.putString("roll number",binding.etrollno.text.toString())
-                findNavController().navigate(R.id.action_firstFragment_to_secondFragment,bundle)
+                bundle.putString("name", binding.etname.text.toString())
+                bundle.putString("roll number", binding.etrollno.text.toString())
+                findNavController().navigate(R.id.action_firstFragment_to_secondFragment, bundle)
+                }
+
+        }
+        binding.btnsnackbar.setOnClickListener {
+            binding.btnsnackbar.let {
+                Snackbar.make(
+                    it,
+                    "Name and Roll number is added succesfully",
+                    Snackbar.LENGTH_SHORT
+                ).setAction("ok")
+                {}
+                    .setAnchorView(binding.btnclick)
+                    .show()
             }
         }
     }
